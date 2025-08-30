@@ -76,16 +76,6 @@ const ProjectsSection = () => {
                   ))}
                 </div>
 
-                <div className="flex gap-2 pt-2">
-                  <Button 
-                    size="sm" 
-                    variant="outline" 
-                    className="flex-1 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground"
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    View Project
-                  </Button>
-                </div>
               </CardContent>
             </Card>
           ))}

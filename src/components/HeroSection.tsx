@@ -23,9 +23,20 @@ const HeroSection = () => {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                onClick={() => {
+                  const element = document.getElementById("projects");
+                  element?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                View Projects
+              </Button>
+              <Button 
                 variant="outline" 
                 size="lg"
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                onClick={() => window.open('https://sunny-resume-1.tiiny.site/', '_blank')}
               >
                 <Download className="mr-2 h-5 w-5" />
                 Download Resume
