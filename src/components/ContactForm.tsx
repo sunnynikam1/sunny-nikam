@@ -30,7 +30,7 @@ const ContactForm = ({ open, onOpenChange }: ContactFormProps) => {
     try {
       await emailjs.send(
         'service_eu69lbc',
-        'template_4q21mfo',
+        'template_jr3z7kw',
         {
           from_name: formData.name,
           from_email: formData.email,
