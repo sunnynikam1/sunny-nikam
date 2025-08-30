@@ -1,12 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Download, Eye } from "lucide-react";
+import { Download } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.png";
 
 const HeroSection = () => {
-  const scrollToProjects = () => {
-    const element = document.getElementById("projects");
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <section className="min-h-screen flex items-center justify-center px-6 pt-20">
@@ -26,14 +22,6 @@ const HeroSection = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-glow"
-                onClick={scrollToProjects}
-              >
-                <Eye className="mr-2 h-5 w-5" />
-                View Projects
-              </Button>
               <Button 
                 variant="outline" 
                 size="lg"

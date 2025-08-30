@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
+import ContactForm from "./ContactForm";
 
 const ContactSection = () => {
+  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
   const contactInfo = [
     {
       icon: Phone,
@@ -26,21 +29,15 @@ const ContactSection = () => {
 
   const socialLinks = [
     {
-      icon: Mail,
-      label: "Get In Touch",
-      href: "mailto:sunnynikam3228@gmail.com",
-      className: "bg-primary hover:bg-primary/90 text-primary-foreground"
-    },
-    {
       icon: Github,
       label: "GitHub",
-      href: "#",
+      href: "https://github.com/sunnynikam1",
       className: "bg-secondary hover:bg-secondary/80 text-secondary-foreground"
     },
     {
       icon: Linkedin,
       label: "LinkedIn", 
-      href: "https://linkedin.com/in/sunnynikam",
+      href: "https://www.linkedin.com/in/sunnynikam/",
       className: "bg-secondary hover:bg-secondary/80 text-secondary-foreground"
     }
   ];
@@ -83,6 +80,14 @@ const ContactSection = () => {
           </Card>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              onClick={() => setIsContactFormOpen(true)}
+            >
+              <Mail className="w-5 h-5 mr-2" />
+              Get In Touch
+            </Button>
             {socialLinks.map((link, index) => (
               <Button
                 key={index}
@@ -97,6 +102,11 @@ const ContactSection = () => {
               </Button>
             ))}
           </div>
+          
+          <ContactForm 
+            open={isContactFormOpen} 
+            onOpenChange={setIsContactFormOpen} 
+          />
         </div>
       </div>
     </section>
