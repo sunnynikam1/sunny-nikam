@@ -12,7 +12,7 @@ const HeroSection = () => {
             <div className="space-y-4">
               <p className="text-muted-foreground text-lg">Hi, I am Sunny,</p>
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                Creative <span className="text-primary">Developer</span>
+                Full Stack <span className="text-primary">Developer</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
                 A dedicated full-stack developer with experience in building 
